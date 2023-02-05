@@ -1,2 +1,5 @@
-05.02.2023 14:36:59 keke logged in 
-05.02.2023 14:37:00 keke logged out
+05.02.2023 14:38:11 Yaroslav logged in 
+05.02.2023 14:38:20 Timber [wood=Wood [id=1, name=Oak, density=10.0], length=1.0, width=1.0, height=1.0, volume()=1.0, weight()=10.0]
+05.02.2023 14:38:27 Cylinder [wood=Wood [id=2, name=Pinetree, density=8.0], length=1.0, diameter=1.0, volume()=0.7853982, weight()=6.2831855]
+05.02.2023 14:38:40 Waste [weight=0.05]
+05.02.2023 14:38:47 Yaroslav logged out

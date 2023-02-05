@@ -7,6 +7,7 @@ import store.WoodDirectory;
 import javax.swing.*;
 import java.io.Console;
 import java.util.Iterator;
+import java.util.function.Predicate;
 
 public class TestApp {
     private WoodDirectory wd = new WoodDirectory();
@@ -65,6 +66,16 @@ public class TestApp {
 
             System.out.println("ProductStore after remove using ListIterator:");
             System.out.println(ps);
+
+            float maxWeight = 0.5f;
+
+            ps.remove(o -> o instanceof Waste && ((IWeight) o).weight() > maxWeight);
+
+            ps.doForAll(System.out::println);
+
+//            show only waste using doOnlyFor
+            System.out.println("Waste:");
+            ps.doOnlyFor(System.out::println, o -> o instanceof Waste);
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.getMessage(), "Введення продуктів", JOptionPane.ERROR_MESSAGE);

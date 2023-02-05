@@ -8,6 +8,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.ListIterator;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 public class AbstractStore implements Serializable, Iterable<Object> {
     protected final ArrayList<Object> arr = new ArrayList<>();
@@ -16,11 +18,9 @@ public class AbstractStore implements Serializable, Iterable<Object> {
     public Iterator<Object> iterator() {
         return new StoreIterator();
     }
-
     public ListIterator<Object> listIterator() {
         return new ListStoreIterator();
     }
-
 
     public ArrayList<Object> getArr() {
         return arr;
@@ -28,6 +28,30 @@ public class AbstractStore implements Serializable, Iterable<Object> {
 
     protected void add(Object newIWeight) {
         arr.add(newIWeight);
+    }
+
+    public void remove(Predicate<Object> predicate) {
+        Iterator<Object> iterator = this.iterator();
+        while (iterator.hasNext()) {
+            Object obj = iterator.next();
+            if (predicate.test(obj)) {
+                iterator.remove();
+            }
+        }
+    }
+
+    public void doForAll(Consumer<Object> consumer) {
+        for (Object obj : this) {
+            consumer.accept(obj);
+        }
+    }
+
+    public void doOnlyFor(Consumer<Object> consumer, Predicate<Object> predicate) {
+        for (Object obj : this) {
+            if (predicate.test(obj)) {
+                consumer.accept(obj);
+            }
+        }
     }
 
     public float calcWeight() {
