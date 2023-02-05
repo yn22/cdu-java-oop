@@ -1,0 +1,9 @@
+Вміст сховища продуктів 
+:Каталог продукції:
+Timber [wood=Wood [id=1, name=Oak, density=10.0], length=10.0, width=2.0, height=2.0, volume()=40.0, weight()=400.0]
+Cylinder [wood=Wood [id=2, name=Pinetree, density=8.0], length=10.0, diameter=5.0, volume()=196.34955, weight()=1570.7964]
+Waste [weight=0.05]
+Timber [wood=Wood [id=1, name=Oak, density=10.0], length=1.0, width=1.0, height=1.0, volume()=1.0, weight()=10.0]
+Cylinder [wood=Wood [id=2, name=Pinetree, density=8.0], length=1.0, diameter=1.0, volume()=0.7853982, weight()=6.2831855]
+Waste [weight=0.05]
+
