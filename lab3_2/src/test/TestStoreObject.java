@@ -18,7 +18,7 @@ public class TestStoreObject {
         WoodDirectory wd = new WoodDirectory();
         wd.add(new Wood(1, "Дуб", 0.7f));
 
-        File f = new File("wood.object");
+        File f = new File("wd.object");
         try {
             FileOutputStream fos = new FileOutputStream(f);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
