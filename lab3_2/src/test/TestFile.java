@@ -1,6 +1,8 @@
 package test;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -29,7 +31,6 @@ public class TestFile {
         JFileChooser dialog = new JFileChooser();
         dialog.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
         dialog.setDialogTitle("Назаренко Ярослав. Група КН-19");
-        dialog.showOpenDialog(null);
         dialog.setFileFilter(new javax.swing.filechooser.FileFilter() {
             @Override
             public boolean accept(File f) {
@@ -44,6 +45,8 @@ public class TestFile {
                 return "Текстові файли (*.txt)";
             }
         });
+        dialog.showOpenDialog(null);
+
         File f = dialog.getSelectedFile();
 
         if (f == null) {
