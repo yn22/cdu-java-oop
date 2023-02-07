@@ -1,0 +1,87 @@
+@startuml "WoodStore - Class Diagram"
+
+    interface IWeight {
+        +weight(): float
+    }
+
+    abstract class AbstractForm {
+        +volume(): float <<abstract>>
+        +weight(): float
+    }
+
+    AbstractForm -.|> IWeight
+
+    class Wood {
+        -id: int
+        -name: String
+        -density: float
+
+        +getId(): int
+        +getName(): String
+        +getDensity(): float
+    }
+
+    class Timber {
+        -length: float
+        -width: float
+        -height: float
+
+        +volume(): float
+    }
+
+    Timber -d-|> AbstractForm
+
+    class Cylinder {
+        -length: float
+        -diameter: float
+
+        +volume(): float
+    }
+
+    Cylinder -d-|> AbstractForm
+
+    class Waste {
+        -weight: float
+        +weight(): float
+    }
+
+    Waste -.|> IWeight : \t
+
+    class AbstractStore {
+        #arr: Object[]
+
+        #add(newObj: Object): void
+        +getArr(): Object[]
+        +calcWeight(): float
+    }
+
+    class WoodDirectory {
+        +get(id: int): Wood
+        +add(newWood: Wood): boolean
+    }
+
+    WoodDirectory --> Wood
+    WoodDirectory --|> AbstractStore
+
+    class ProductStore {
+        +add(newTimber: Timber): void
+    }
+
+    ProductStore --> IWeight
+    ProductStore --|> AbstractStore
+
+    class TestApp {
+        +main(args: String[]): void <<static>>
+    }
+
+    TestApp --> ProductStore
+    TestApp --> WoodDirectory
+
+    class TestByConsole {
+        +main(args: String[]): void <<static>>
+    }
+
+    TestByConsole --> ProductStore
+    TestByConsole --> WoodDirectory
+
+@enduml
