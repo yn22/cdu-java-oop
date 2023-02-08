@@ -52,10 +52,7 @@ public class TestApp {
             System.out.println("ProductStore after remove:");
             System.out.println(ps);
 
-            System.out.println("ProductStore before remove using ListIterator:");
-            System.out.println(ps);
-
-            Iterator<Object> iter2 = ps.iterator();
+            Iterator<Object> iter2 = ps.listIterator();
             while (iter2.hasNext()) {
                 IWeight obj = (IWeight) iter2.next();
                 if (obj.weight() > 0.5) {

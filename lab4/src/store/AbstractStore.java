@@ -21,7 +21,6 @@ public class AbstractStore implements Serializable, Iterable<Object> {
         return new ListStoreIterator();
     }
 
-
     public ArrayList<Object> getArr() {
         return arr;
     }

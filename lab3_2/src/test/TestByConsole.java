@@ -92,16 +92,16 @@ public class TestByConsole {
         }
     }
 
-    private void logUserLogin(String userName) {
-        String log = String.format("%s logged in ", userName);
-
-        writeStringToFile(log);
-    }
-
     private String requestUserCredentials(Scanner scanner) {
         System.out.println("Please, input your name and press Enter");
 
         return scanner.nextLine();
+    }
+
+    private void logUserLogin(String userName) {
+        String log = String.format("%s logged in ", userName);
+
+        writeStringToFile(log);
     }
 
     private void addWood(Scanner scanner) {
