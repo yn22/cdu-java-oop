@@ -10,33 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f24bbfe-9edf-4872-9e07-655bec5ce798" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlet/MainServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlet/ProductServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlet/WasteServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlet/WoodServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/util/SessionFactoryUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/product.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo/src/main/java/model/Person.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo/src/main/java/model/Student.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo/src/main/java/util/HibernateUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1504bdf4-c0fd-4765-94f0-a127e457a062.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1504bdf4-c0fd-4765-94f0-a127e457a062.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1504bdf4-c0fd-4765-94f0-a127e457a062/storage_v2/_src_/database/lab8_db.8vgm_A/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1504bdf4-c0fd-4765-94f0-a127e457a062/storage_v2/_src_/database/lab8_db.8vgm_A/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/HelloServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/dao/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/WasteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/dao/WasteDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/WoodDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/dao/WoodDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/AbstractForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/model/AbstractForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/model/Cylinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/IWeight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/model/IWeight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Timber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/model/Timber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Waste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/model/Waste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Wood.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/model/Wood.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" beforeDir="false" />
@@ -201,11 +177,22 @@
       <workItem from="1676047488590" duration="9118000" />
       <workItem from="1676059288899" duration="5397000" />
       <workItem from="1676112270685" duration="6572000" />
-      <workItem from="1676122214323" duration="12713000" />
+      <workItem from="1676122214323" duration="13022000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
