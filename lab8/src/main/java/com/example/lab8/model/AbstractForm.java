@@ -1,4 +1,4 @@
-package model;
+package com.example.lab8.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -21,13 +21,42 @@ public abstract class AbstractForm implements IWeight, Serializable {
     public AbstractForm() {
 
     }
-
     public abstract float volume();
 
     @Override
     public float weight() {
         return volume() * wood.getDensity();
     }
+
+    public float getWeight() {
+        return weight();
+    }
+
+    public float getVolume() {
+        return volume();
+    }
+
+    public Wood getWood() {
+        return wood;
+    }
+
+    public float getLength() {
+        return 0;
+    }
+
+    public float getWidth() {
+        return 0;
+    }
+
+    public float getHeight() {
+        return 0;
+    }
+
+    public float getDiameter() {
+        return 0;
+    }
+
+    public abstract String getType();
 
     public void setId(Long id) {
         this.id = id;

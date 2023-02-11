@@ -8,10 +8,10 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
 
-        <mapping class="model.AbstractForm"/>
-        <mapping class="model.Wood"/>
-        <mapping class="model.Cylinder"/>
-        <mapping class="model.Timber"/>
-        <mapping class="model.Waste"/>
+        <mapping class="com.example.lab8.model.AbstractForm"/>
+        <mapping class="com.example.lab8.model.Wood"/>
+        <mapping class="com.example.lab8.model.Cylinder"/>
+        <mapping class="com.example.lab8.model.Timber"/>
+        <mapping class="com.example.lab8.model.Waste"/>
     </session-factory>
 </hibernate-configuration>

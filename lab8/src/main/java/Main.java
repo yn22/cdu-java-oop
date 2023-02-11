@@ -1,7 +1,8 @@
-import dao.ProductDao;
-import dao.WasteDao;
-import dao.WoodDao;
-import model.*;
+import com.example.lab8.dao.ProductDao;
+import com.example.lab8.dao.WasteDao;
+import com.example.lab8.dao.WoodDao;
+import com.example.lab8.model.*;
+import com.example.lab8.model.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -57,8 +58,8 @@ public class Main {
         wood.forEach(session::save);
         products.forEach(session::save);
 
-        String productQuery = "FROM model.AbstractForm";
-        String wasteQuery = "FROM model.Waste";
+        String productQuery = "FROM com.example.lab8.model.AbstractForm";
+        String wasteQuery = "FROM com.example.lab8.model.Waste";
         Query query = session.createQuery(productQuery);
         query.getResultList().forEach(System.out::println);
         query = session.createQuery(wasteQuery);

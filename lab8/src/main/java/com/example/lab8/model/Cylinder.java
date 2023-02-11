@@ -1,4 +1,4 @@
-package model;
+package com.example.lab8.model;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
@@ -6,8 +6,8 @@ import java.io.Serializable;
 @Entity
 @DiscriminatorValue("CYLINDER")
 public class Cylinder extends AbstractForm implements Serializable {
-    private final float length;
-    private final float diameter;
+    private float length;
+    private float diameter;
 
     public Cylinder(Wood wood, float length, float diameter) throws Exception {
         super(wood);
@@ -36,6 +36,31 @@ public class Cylinder extends AbstractForm implements Serializable {
     @Override
     public float volume() {
         return (float) (Math.PI * Math.pow(diameter / 2, 2) * length);
+    }
+
+    public float getDiameter() {
+        return diameter;
+    }
+
+    public void setDiameter(float diameter) {
+        this.diameter = diameter;
+    }
+
+    public float getLength() {
+        return length;
+    }
+
+    public void setLength(float length) {
+        this.length = length;
+    }
+
+    @Override
+    public String getType() {
+        return "CYLINDER";
+    }
+
+    public void setType(String type) {
+        // do nothing
     }
 
     @Override

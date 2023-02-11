@@ -1,4 +1,4 @@
-package model;
+package com.example.lab8.model;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
@@ -6,9 +6,9 @@ import java.io.Serializable;
 @Entity
 @DiscriminatorValue("TIMBER")
 public class Timber extends AbstractForm implements Serializable {
-    private final float length;
-    private final float width;
-    private final float height;
+    private float length;
+    private float width;
+    private float height;
 
     public Timber(Wood wood, float length, float width, float height) throws Exception {
         super(wood);
@@ -32,6 +32,39 @@ public class Timber extends AbstractForm implements Serializable {
 
     public float volume() {
         return length * width * height;
+    }
+
+    public float getLength() {
+        return length;
+    }
+
+    public void setLength(float length) {
+        this.length = length;
+    }
+
+    public float getWidth() {
+        return width;
+    }
+
+    public void setWidth(float width) {
+        this.width = width;
+    }
+
+    public float getHeight() {
+        return height;
+    }
+
+    public void setHeight(float height) {
+        this.height = height;
+    }
+
+    @Override
+    public String getType() {
+        return "TIMBER";
+    }
+
+    public void setType(String type) {
+        // do nothing
     }
 
     @Override

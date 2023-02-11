@@ -1,4 +1,4 @@
-package model;
+package com.example.lab8.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -26,6 +26,22 @@ public class Waste implements IWeight, Serializable {
     @Override
     public float weight() {
         return weight;
+    }
+
+    public float getWeight() {
+        return weight;
+    }
+
+    public void setWeight(float weight) {
+        this.weight = weight;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     @Override

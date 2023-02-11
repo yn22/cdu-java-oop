@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.45">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>995</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1002</IntrospectionStateNumber>
       <ServerVersion>15.1</ServerVersion>
       <StartupTime>1676107703</StartupTime>
       <TimeZones>true ACDT
@@ -800,7 +800,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>995</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1002</IntrospectionStateNumber>
       <ObjectId>32787</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4218,7 +4218,7 @@ false Zulu
     <schema id="262" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>995</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1002</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4229,33 +4229,110 @@ false Zulu
       <StateNumber>968</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="264" parent="262" name="waste">
+    <table id="264" parent="262" name="product">
+      <ObjectId>33068</ObjectId>
+      <StateNumber>997</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="265" parent="262" name="waste">
       <ObjectId>33052</ObjectId>
       <StateNumber>976</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="265" parent="262" name="wood">
+    <table id="266" parent="262" name="wood">
       <ObjectId>33057</ObjectId>
       <StateNumber>978</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="266" parent="264" name="id">
+    <column id="267" parent="264" name="product_type">
+      <DasType>varchar(31)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>996</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="268" parent="264" name="id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>996</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="269" parent="264" name="diameter">
+      <DasType>real|0s</DasType>
+      <Position>3</Position>
+      <StateNumber>996</StateNumber>
+      <TypeId>700</TypeId>
+    </column>
+    <column id="270" parent="264" name="length">
+      <DasType>real|0s</DasType>
+      <Position>4</Position>
+      <StateNumber>996</StateNumber>
+      <TypeId>700</TypeId>
+    </column>
+    <column id="271" parent="264" name="height">
+      <DasType>real|0s</DasType>
+      <Position>5</Position>
+      <StateNumber>996</StateNumber>
+      <TypeId>700</TypeId>
+    </column>
+    <column id="272" parent="264" name="width">
+      <DasType>real|0s</DasType>
+      <Position>6</Position>
+      <StateNumber>996</StateNumber>
+      <TypeId>700</TypeId>
+    </column>
+    <column id="273" parent="264" name="wood_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StateNumber>996</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="274" parent="264" name="fkodius8uu98o02dp3f2ogyjt7r">
+      <ColNames>wood_id</ColNames>
+      <ObjectId>33073</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <StateNumber>997</StateNumber>
+      <RefTableId>33057</RefTableId>
+      <RefTableName>wood</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <index id="275" parent="264" name="product_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>33071</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>996</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="276" parent="264" name="product_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>33072</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>996</StateNumber>
+      <UnderlyingIndexId>33071</UnderlyingIndexId>
+    </key>
+    <column id="277" parent="265" name="id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>976</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="267" parent="264" name="weight">
+    <column id="278" parent="265" name="weight">
       <DasType>real|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>976</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <index id="268" parent="264" name="waste_pkey">
+    <index id="279" parent="265" name="waste_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>33055</ObjectId>
@@ -4264,34 +4341,34 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="269" parent="264" name="waste_pkey">
+    <key id="280" parent="265" name="waste_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>33056</ObjectId>
       <Primary>1</Primary>
       <StateNumber>976</StateNumber>
       <UnderlyingIndexId>33055</UnderlyingIndexId>
     </key>
-    <column id="270" parent="265" name="id">
+    <column id="281" parent="266" name="id">
       <DasType>integer|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>977</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="271" parent="265" name="density">
+    <column id="282" parent="266" name="density">
       <DasType>real|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>977</StateNumber>
       <TypeId>700</TypeId>
     </column>
-    <column id="272" parent="265" name="name">
+    <column id="283" parent="266" name="name">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
       <StateNumber>977</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="273" parent="265" name="wood_pkey">
+    <index id="284" parent="266" name="wood_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>33060</ObjectId>
@@ -4300,7 +4377,7 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="274" parent="265" name="wood_pkey">
+    <key id="285" parent="266" name="wood_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>33061</ObjectId>
       <Primary>1</Primary>
