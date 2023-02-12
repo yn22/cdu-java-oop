@@ -35,13 +35,9 @@ public class WoodDao {
     }
 
     public void delete(Integer woodId) {
-        try {
             Transaction transaction = session.beginTransaction();
             Wood wood = session.get(Wood.class, woodId);
             session.delete(wood);
             transaction.commit();
-        } catch (PersistenceException e) {
-            throw new RuntimeException("Cannot delete wood with id " + woodId + " because it is used in products");
-        }
     }
 }

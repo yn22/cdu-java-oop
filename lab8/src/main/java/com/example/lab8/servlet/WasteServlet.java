@@ -14,9 +14,9 @@ import java.io.IOException;
 @WebServlet("/waste")
 public class WasteServlet extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         if (req.getParameter("action").equals("delete")) {
-            doDelete(req, resp);
+            deleteWaste(req);
         }
         else if (req.getParameter("action").equals("save")) {
             saveWaste(req);
@@ -24,8 +24,7 @@ public class WasteServlet extends HttpServlet {
         resp.sendRedirect(req.getContextPath() + "/");
     }
 
-    @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void deleteWaste(HttpServletRequest req) {
         WasteDao wasteDao = new WasteDao(SessionFactoryUtil.getSessionFactory().openSession());
         wasteDao.delete(Long.parseLong(req.getParameter("id")));
     }

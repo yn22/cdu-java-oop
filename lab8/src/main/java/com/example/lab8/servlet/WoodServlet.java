@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+import javax.persistence.PersistenceException;
 import java.io.IOException;
 
 @WebServlet("/wood")
@@ -16,7 +17,7 @@ public class WoodServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (req.getParameter("action").equals("delete")) {
-            doDelete(req, resp);
+            deleteWood(req);
         }
         else if (req.getParameter("action").equals("save")) {
             saveWood(req);
@@ -24,10 +25,13 @@ public class WoodServlet extends HttpServlet {
         resp.sendRedirect(req.getContextPath() + "/");
     }
 
-    @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void deleteWood(HttpServletRequest req) throws ServletException, IOException {
+        try {
         WoodDao woodDao = new WoodDao(SessionFactoryUtil.getSessionFactory().openSession());
         woodDao.delete(Integer.parseInt(req.getParameter("id")));
+        } catch (PersistenceException e) {
+            throw new ServletException("Cannot delete wood because it is used in products");
+        }
     }
 
     private void saveWood(HttpServletRequest req) {

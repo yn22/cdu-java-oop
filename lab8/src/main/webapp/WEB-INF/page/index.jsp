@@ -1,27 +1,26 @@
+<%@ page import="com.example.lab8.servlet.MainServlet" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<jsp:useBean id="products" class="java.util.ArrayList" scope="request"/>
-<jsp:useBean id="woods" class="java.util.ArrayList" scope="request"/>
-<jsp:useBean id="waste" class="java.util.ArrayList" scope="request"/>
-
 <!DOCTYPE html>
 <html>
 <head>
-<%--    include styles.css--%>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
     <title>Product Store</title>
+    <style>
+        td, th {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-
 <h1>Woods</h1>
-<table border="1">
+<table>
     <tr>
         <th>Id</th>
         <th>Name</th>
         <th>density</th>
         <th>Actions</th>
     </tr>
-    <c:forEach items="${woods}" var="wood">
+    <c:forEach items="${data.woods}" var="wood">
         <tr>
             <td><c:out value="${wood.id}"/></td>
             <td><c:out value="${wood.name}"/></td>
@@ -51,7 +50,7 @@
         </form>
 </table>
 <h1>Products</h1>
-<table border="1">
+<table>
     <tr>
         <th>Id</th>
         <th>Type</th>
@@ -64,7 +63,7 @@
         <th>Diameter</th>
         <th>Actions</th>
     </tr>
-    <c:forEach items="${products}" var="product">
+    <c:forEach items="${data.products}" var="product">
         <tr>
             <td><c:out value="${product.id}"/></td>
             <td><c:out value="${product.type}"/></td>
@@ -96,13 +95,13 @@
             </td>
             <td>
                 <select name="woodId">
-                    <c:forEach items="${woods}" var="wood">
+                    <c:forEach items="${data.woods}" var="wood">
                         <option value="${wood.id}">${wood.name}</option>
                     </c:forEach>
                 </select>
             </td>
-            <td class="dashed"></td>
-            <td class="dashed"></td>
+            <td style="border: 1px dashed black;"></td>
+            <td style="border: 1px dashed black;"></td>
             <td>
                 <input type="text" name="length"/>
             </td>
@@ -121,14 +120,14 @@
         </form>
     </tr>
 </table>
-<h1>Waste (total weight: <c:out value="${wasteWeight}"/> kg)</h1>
-<table border="1">
+<h1>Waste (total weight: <c:out value="${data.wasteWeight}"/> kg)</h1>
+<table>
     <tr>
         <th>Id</th>
         <th>Weight</th>
         <th>Action</th>
     </tr>
-    <c:forEach items="${waste}" var="waste">
+    <c:forEach items="${data.waste}" var="waste">
         <tr>
             <td><c:out value="${waste.id}"/></td>
             <td><c:out value="${waste.weight}"/></td>

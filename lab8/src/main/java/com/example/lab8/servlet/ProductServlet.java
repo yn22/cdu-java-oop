@@ -16,29 +16,28 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/product")
-public class ProductServlet  extends HttpServlet {
+public class ProductServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getParameter("action").equals("delete")) {
-            doDelete(request, response);
-        }
-        else if (request.getParameter("action").equals("save")) {
+            deleteProduct(request);
+        } else if (request.getParameter("action").equals("save")) {
             saveProduct(request);
         }
         response.sendRedirect(request.getContextPath() + "/");
     }
 
-    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void deleteProduct(HttpServletRequest request) {
         ProductDao productDao = new ProductDao(SessionFactoryUtil.getSessionFactory().openSession());
         productDao.delete(Long.parseLong(request.getParameter("id")));
     }
 
-    private void saveProduct(HttpServletRequest request) {
+    private void saveProduct(HttpServletRequest request) throws ServletException {
         try {
             AbstractForm product = createProduct(request);
             ProductDao productDao = new ProductDao(SessionFactoryUtil.getSessionFactory().openSession());
             productDao.save(product);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new ServletException("Cannot save product");
         }
     }
 

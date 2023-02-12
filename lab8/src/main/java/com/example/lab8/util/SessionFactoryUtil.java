@@ -10,5 +10,4 @@ public class SessionFactoryUtil {
         }
         return sessionFactory;
     }
-
 }

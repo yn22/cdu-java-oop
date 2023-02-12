@@ -10,17 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f24bbfe-9edf-4872-9e07-655bec5ce798" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/model/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/model/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/util/HibernateUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/dao/WoodDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/dao/WoodDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlet/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlet/MainServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlet/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlet/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlet/WasteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlet/WasteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlet/WoodServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/servlet/WoodServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab8/util/SessionFactoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab8/util/SessionFactoryUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/product.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/page/waste.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/styles.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,9 +83,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\yaros\Documents\Java projects\cdu-java\lab8\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\yaros\Documents\Java projects\cdu-java\lab8\src\main\webapp" />
       <recent name="C:\Users\yaros\Documents\Java projects\cdu-java\lab8\src\main\webapp\WEB-INF\page" />
-      <recent name="C:\Users\yaros\Documents\Java projects\cdu-java\lab8\src\main\webapp\WEB-INF" />
       <recent name="C:\Users\yaros\Documents\Java projects\cdu-java\lab8\src\main\webapp\page" />
     </key>
   </component>
@@ -177,7 +177,11 @@
       <workItem from="1676047488590" duration="9118000" />
       <workItem from="1676059288899" duration="5397000" />
       <workItem from="1676112270685" duration="6572000" />
-      <workItem from="1676122214323" duration="13022000" />
+      <workItem from="1676122214323" duration="13140000" />
+      <workItem from="1676141427784" duration="3020000" />
+      <workItem from="1676150312850" duration="973000" />
+      <workItem from="1676192556086" duration="764000" />
+      <workItem from="1676194557690" duration="4218000" />
     </task>
     <servers />
   </component>
